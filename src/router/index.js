@@ -3,7 +3,19 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const constantRoutes = [];
+import HomeComponent from '@/example/home';
+
+const constantRoutes = [
+    {
+        path: '/',
+        redirect: '/home',
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: HomeComponent,
+    },
+];
 
 const createRouter = () => new VueRouter({
     routes: constantRoutes,
