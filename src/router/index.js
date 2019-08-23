@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import HomeComponent from '@/example/home';
+import AutoComplete from '@/example/autocomplete';
 
 const constantRoutes = [
     {
@@ -14,6 +15,15 @@ const constantRoutes = [
         path: '/home',
         name: 'home',
         component: HomeComponent,
+    },
+    {
+        path: '/autocomplete',
+        name: 'autocomplete',
+        component: AutoComplete,
+    },
+    {
+        path: '*',
+        redirect: '/home',
     },
 ];
 

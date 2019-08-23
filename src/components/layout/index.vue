@@ -1,8 +1,9 @@
 <script>
 export default {
+    name: 'Layout',
     render() {
         return <div>
-            <slot></slot>
+            { this.$slots.default }
         </div>;
     },
 };
